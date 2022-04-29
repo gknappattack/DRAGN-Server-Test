@@ -1,5 +1,6 @@
 import json
 import requests
+import sys
 
 class Client:
     def __init__(self, ip="localhost", port="8088", path="/"):
@@ -60,6 +61,7 @@ class Console:
 
     def receive_input(self):
         print("Welcome to DRAGNTown Chatbot Test Interface\n")
+        self.print_all_chatbots()
 
         while True:
             user_in = input("Select a chatbot to interface with: ")
@@ -67,6 +69,8 @@ class Console:
             # Check to print all chatbots
             if user_in == "--help" or user_in == "-h":
                 self.print_all_chatbots()
+            elif user_in == "--quit" or user_in == "quit" or user_in == "q":
+                sys.exit("Closing server test. Thank you!")
             else: # Process input like normal
                 try:
                     int_input = int(user_in)
