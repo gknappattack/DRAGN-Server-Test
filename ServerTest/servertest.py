@@ -38,16 +38,19 @@ class Console:
         self.chatbot_index_mapping = {
             0:"ECHO",
             1:"TREVOR",
-            2:"KEVIN"
+            2:"KEVIN",
+            3:"GARY"
         }
 
         self.chatbot_path_mapping = {
             0:"/chatbot/echo",
             1:"/chatbot/trevor",
-            2:"/chatbot/kevin"
+            2:"/chatbot/kevin",
+            3:"/chatbot/kevin"
         }
 
-        self.ip = "192.168.86.65"
+        # Change these to match your machine
+        self.ip = "1.0.0.0"
         self.port = "8088"
 
     def print_all_chatbots(self):
